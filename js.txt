@@ -1,0 +1,120 @@
+js => prog lang for web pages.(for behaviour of web pages)
+
+ES8(2020) , ES6(2015) Es5 (2009) (ECMA )
+
+
+WHAT JS CAN DO :
+
+change html content
+change html attributes values
+change css styles
+can show/hide html elements
+
+BOM
+
+How we can write js:
+
+above the closing body tag
+</body>
+
+<head> </head>
+
+external script:
+
+1- use same code in diff pages
+2- spearate html and js code
+3- Cached js files can speed up page loads
+
+Note: script tag cant use in external script
+
+
+<p id="someid" >  </p>
+
+JS OUTPUT:
+
+console.log('helo', '' ,'sadasdas'); // testing, debugging
+
+document.write('hello') => testing 
+
+window.alert() or alert();
+
+writing into html element : document.getElementById('someid').innerHTML = 'output'
+
+DOM 
+
+js syntax:
+
+int char float
+
+var x = "10" (Number) , ' ', " "(string)
+
+var y;
+y = 10;
+
+var y = 10;
+
+"use strict";
+
+3 set of rules:
+Declare a vraible (var , let , const) var x, let y , const z, var x,y,z
+assign value or define the varaible x = 6; y =10;
+computation z = x+y; 16 (x is undefined)
+var x = 10;
+
+fixed, varaibles
+
+ x = 10;
+var hy = 20;
+
+
+var name = '10'; // string data type
+
+var x,y,z;
+x=10; // primitive  => immutable
+
+var x = 16;
+
+x = 17
+var x= '10';
+
+z = x+y;
+
+var obj = { // complex data type => mutable
+    name:'abhishek'
+}
+
+obj = {
+    city:'kanpur'
+}
+
+
+obj.name = "abhishek";
+obj = null;
+
+numbers, string: , "", ''
+10, 10.52
+var x = 10.53;
+
+var x = 1 ; var y =  "2";
+
+github : verison control system
+
+Github command:
+
+git clone https://github.com/divyanshdixit/react-app-concepts.git
+
+git checkout -b "development" (for make a new branch)
+
+git checkout "main" (for switching to existing branch)
+
+git add .
+git commit -m "any commit message"
+git push
+git pull
+
+Conflicts:
+Automatic, manually
+
+Frontend:
+
+React, redux, webpack, ajax, ES6.
