@@ -23,6 +23,7 @@ null == undefined => true
 
 Complex data type:
 
+
  
 Object 
 arrays => Arrays are special kind of object => typeof arr => object
