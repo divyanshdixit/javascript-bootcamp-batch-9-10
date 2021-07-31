@@ -103,24 +103,27 @@ console.log(f)
 
 // Re-declare "let" variable with "let" in same block and scope
 
-// let g = 2;
-// let g = 3; // not allowed
+let g = 2;
+let g = 3; // not allowed
 
-// {
-//     let g = 4; // allowed
-//     let g = 5; // not
-// }
+{
+    let g = 4; // allowed
+    let g = 5; // not
+}
 
 // Re-declare a "let" variable with "var" in same scope and block
 
-// let x = 2; 
+// var x = 2; 
 // var x = 3; // Not allowed
 
 // {
-//     let x = 4;  
-//     var x = 5; // not allowed
+//     var x = 4;
+//     var x = 5
+//     console.log(x)
+//     // var x = 5; // not allowed
 // }
 
+// console.log(x)
 // Re-declare variable with "let" in another scope or block is allowed:
 
 let x = 2;
@@ -158,6 +161,16 @@ var a;
 // let fname; // gives reference error
 
 // Const:  
+
+const c = 'divya'; // 2123 single vairable hold single value
+const d = { // 2222
+    name:'div'
+}
+
+const d = [] //999
+
+c = "sadsa" 
+
 // it defines a constant reference to value (that's why we cant change the primitive value but we can change the props of const object)
 
 // let name;
@@ -187,10 +200,12 @@ console.log(person)
 
 
 var j = 10;
+const j = 20; // error
 console.log(j)
 
 {
     const j = 20;
+    var j = 10; // error
     console.log(j)  // 20
 }
 
@@ -205,12 +220,13 @@ console.log(j)
 // //     key : value
 // // }
 
-// const person = {
-//     name:"Divyansh",
-//     city:"kanpur",
-//     age: 25
-// }
+const person = {
+    name:"Divyansh",
+    city:"kanpur",
+    age: 25
+}
 
+person = [];
 // person.name = "kishu";
 
 // console.log(person.name)
