@@ -22,7 +22,8 @@ null == undefined => true
 
 
 Complex data type:
-
+asdassadasdddd
+adsasd
 
  
 Object 
