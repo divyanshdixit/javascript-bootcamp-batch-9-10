@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    
 
+    
+</head>
+
+<body onload="runload()">
+
+    <p id="para"> hide it </p>
+    <button type="button" id="btn1" class="" onclick="clickfunction(this)" ondblclick="reset(this)" > Click me </button>
+    <button type="button" id="btn1" class="" onclick="this.innerHTML = 'clicked'" ondblclick="reset(this)" > Click me </button>
+
+    <input type="text" value="" onchange="changefun(this)" onclick="inputclick()"/>
+
+    <!-- <button -->
     <script>
+        
+        function changefun(e){
+            console.log('value changed');
+            console.log(e, e.value)
+            // e.value = "asdasdda"
+        }
+
+        function inputclick(){
+            console.log('input click')
+        }
+    //     setTimeout(() => {
+         
+    // }, 1000);
+    
+        document.getElementById('para').addEventListener('click', () => {console.log('object')});
+
+        function runload(){
+            console.log('loading finished')
+        }
+
+        function clickfunction(e){ // event object
+            e.innerHTML = "clicked";
+            console.log('clicked', e)
+        }
+
+        function reset(e){
+            e.innerHTML = "Click me"
+        }
         // function name(x,y,z) { // parameter
         //     j = 10;
         //     console.log('object')
