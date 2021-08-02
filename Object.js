@@ -96,7 +96,7 @@ console.log(newObj);
 
 // ObjectName.newPropertyname = "value"
 
-// newObj.color = "fair";
+// newObj.color = "black";
 
 console.log(newObj);
 
@@ -108,9 +108,9 @@ newObj.getColor = function(){
     return this.color;
 }
 
-// console.log(newObj);
+console.log(newObj);
 
-// ( newObj.hasOwnProperty() ) ? console.log(newObj.getColor()) : newObj.color = "fair";
+( newObj.hasOwnProperty('color') ) ? console.log(newObj.getColor()) : newObj.color = "fair";
 
 console.log(newObj);
 // console.log(newObj, newObj.getColor());
