@@ -16,12 +16,14 @@
 
 {/* <p style=""></p> */}
 
- <p onclick="myfunction()" id="para"></p>
+ <p onclick="myfunction()" id="para"> </p>
 
+//  Dom
 document.getElementById('para').onclick = myfunc()
 
 // var myfunction = 
 
-document.getElementById('para').addEventListener('click', function(){
+// DOm
+document.getElementById('para').addEventListener('click', function(e){
     console.log('object')
 })

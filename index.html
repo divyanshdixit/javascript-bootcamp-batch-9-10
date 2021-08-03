@@ -12,54 +12,75 @@
 <body onload="runload()">
 
     <p id="para"> hide it </p>
-    <button type="button" id="btn1" class="" onclick="clickfunction(this)" ondblclick="reset(this)" > Click me </button>
-    <button type="button" id="btn1" class="" onclick="this.innerHTML = 'clicked'" ondblclick="reset(this)" > Click me </button>
 
-    <input type="text" value="" onchange="changefun(this)" onclick="inputclick()"/>
+    <p id="result">  </p>
+
+    <button type="button" id="btn1" class="" onclick="clickfunction(this)" ondblclick="reset(this)" > Click me </button>
+    <button type="button" id="btn1" class="" onclick="this.innerHTML = 'clicked'" ondblclick="this.innerHTML = 'Click me ' " > Click me </button>
+
+    <input type="text" value="" id="input-elem" onchange="changefun(this)" onclick="inputclick(this)" onkeydown="keydown()"/> 
 
     <!-- <button -->
     <script>
-        
-        function changefun(e){
+        // onfocus, onblur, onmouseover, onmouseout
+        document.getElementById('para').addEventListener('click', function(e){
+            console.log(e)
+        })
+
+
+        // document.getElementById('para').onclick = clickfunction;
+        function changefun(elem){
             console.log('value changed');
-            console.log(e, e.value)
-            // e.value = "asdasdda"
+            // console.log(document.getElementById('input-elem').value);
+            // document.getElementById('input-elem').value = 'change value'
+            console.log(elem.value);
+            
         }
 
-        function inputclick(){
-            console.log('input click')
+        function inputclick(elem){
+            console.log('input click');
+            elem.value = 'canhe value'
         }
-    //     setTimeout(() => {
+
+        function keydown(){
+            console.log('key down');
+        }
+    // //     setTimeout(() => {
          
-    // }, 1000);
+    // // }, 1000);
     
-        document.getElementById('para').addEventListener('click', () => {console.log('object')});
+    //     document.getElementById('para').addEventListener('click', () => {console.log('object')});
 
         function runload(){
             console.log('loading finished')
         }
 
-        function clickfunction(e){ // event object
-            e.innerHTML = "clicked";
-            console.log('clicked', e)
+        function clickfunction(elem,event){ // event object
+            document.getElementById('result').innerHTML = 'clicked';
+            console.log(event);
+
+            console.log(elem);
+            elem.innerHTML = 'clicked';
+            // console.log('clicked', e)
         }
 
-        function reset(e){
-            e.innerHTML = "Click me"
+        function reset(elem){
+            document.getElementById('result').innerHTML = '';
+            elem.innerHTML = "Click me";
         }
-        // function name(x,y,z) { // parameter
+    //     // function name(x,y,z) { // parameter
+    //     //     j = 10;
+    //     //     console.log('object')
+    //     //     return x+y+z;
+    //     // }
+    //     // name(1,2,3);
+    //     // console.log(j)
+
+        // function value(){
         //     j = 10;
-        //     console.log('object')
-        //     return x+y+z;
         // }
-        // name(1,2,3);
-        // console.log(j)
-
-        function value(){
-            j = 10;
-        }
-        value();
-        console.log(j);
+        // value();
+        // console.log(j);
     </script>
 </body>
 </html>
