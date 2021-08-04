@@ -23,9 +23,14 @@
     <!-- <button -->
     <script>
         // onfocus, onblur, onmouseover, onmouseout
-        document.getElementById('para').addEventListener('click', function(e){
+        // document.getElementById('para').addEventListener('click', function(e){
+        //     console.log(e)
+        // })
+
+        document.getElementById('para').onclick= clickme;
+        function clickme(e){
             console.log(e)
-        })
+        }
 
 
         // document.getElementById('para').onclick = clickfunction;
@@ -81,6 +86,10 @@
         // }
         // value();
         // console.log(j);
+
+
     </script>
+
+    <script src="./calculator.js"></script>
 </body>
 </html>

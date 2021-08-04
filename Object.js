@@ -114,3 +114,6 @@ console.log(newObj);
 
 console.log(newObj);
 // console.log(newObj, newObj.getColor());
+
+
+// Comparing two object (complex ) and number (primitive)
