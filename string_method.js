@@ -13,9 +13,12 @@
 
 // indexOf("word",index) => get the first occurance of text, return index number of find string
 // if second argument is omitted searching willl start from zero index(starting of string)
-// if text is not exist it'll return -1 always.
+// if word is not exist it'll return -1 always.
 
 // starting index = 0
+
+"name age city "
+
 var str = "my name is Divyansh  asdas Divyansh ss";
 
 console.log(str.length);
@@ -24,8 +27,8 @@ console.log(str.indexOf("divyansh")); //second parameter is omitted
 console.log(str.indexOf("name", 9));
 
 // lastIndexOf("word", index)
-
-console.log(str.lastIndexOf("divyansh", 38));
+// 'Divyansh ss'
+console.log(str.lastIndexOf("Divyansh", 11)); // 27 
 
 // console.log(arr.constructor.toString().indexOf('Array'));
 
@@ -34,17 +37,15 @@ console.log(str.lastIndexOf("divyansh", 38));
 // }
 
 
-// Search for a string in string:
+// Search for a string in string :
 
 // str.search("word")
-// str.search(/[(A-Z){1}(a-z)]/ )
-
-
+// str.search(/[(A-Z){1}(a-z)]/)
 
 // difference in search and indexOf()
 
-// search cant take second arguent(starting postition)
-// regularExp pattern can be used in search
+// "search can't take second arguent(starting postition)""
+// regularExpression pattern can be used in search
 
 console.log(str.search(/^[(A-Z){1}(a-z)]/))
 
@@ -64,14 +65,14 @@ console.log(str.search(/^[(A-Z){1}(a-z)]/))
 // if ommited then return whole string
 // slice() accept -ve index, if used then position counted from end of the string
 
--12-len
+
 
 var string1 = "give me some part of string!";
 var len = string1.length;
-console.log(string1.slice(0, 9))
+console.log(string1.slice(0,9))
 console.log(string1)
 
-console.log(string1.slice(-12, -9)); // start= -12 (last) end = -6(last)
+console.log(string1.slice(-12, -9)); // start index from last = -12 (last),  ending index from last= -6(last)
 
 
 // substring(start, end) => index
@@ -81,7 +82,7 @@ console.log(string1.slice(-12, -9)); // start= -12 (last) end = -6(last)
 console.log(string1.substring(9,12));
 
 
-// substr(start, length)
+// substr(start, length):
 
 // similar to slice() but second param specifies the length of extracted part
 // length is optional
@@ -89,6 +90,7 @@ console.log(string1.substring(9,12));
 
 console.log(string1.substr(-10,10));
 
+// *************
 
 // 3- replace string content:
 
@@ -125,7 +127,7 @@ var trimString = "            Divyansh          ";
 console.log(trimString.trim())
 
 
-// extracting string char:
+// extracting string char:-
 
 // charAt(position) => return char at given index.
 // charCodeAt(position) => return unicode of char at specified index
@@ -133,4 +135,4 @@ console.log(trimString.trim())
 
 console.log(str.charAt(109)) // retrun empty stirng
 console.log(str[109]) // return undefined
-console.log(str.charCodeAt(0))
+console.log(str.charCodeAt(0));

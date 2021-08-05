@@ -21,6 +21,7 @@ const doMath = {
     }
 }
 
+// window => global
 var num1 = prompt('Write first value here'); // string
 var num2 = prompt('Write second value here'); // string
 
