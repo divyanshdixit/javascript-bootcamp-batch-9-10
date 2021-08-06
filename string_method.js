@@ -19,7 +19,7 @@
 
 "name age city "
 
-var str = "my name is Divyansh  asdas Divyansh ss";
+var str = "@my name is Divyansh  asdas Divyansh ss";
 
 console.log(str.length);
 
@@ -58,14 +58,13 @@ console.log(str.search(/^[(A-Z){1}(a-z)]/))
 
 // substr(start, length)
 
+
 // slice(start, end) => index
 
 // extreact a part of string return extracted part in new string.
 // ending index is not included
 // if ommited then return whole string
 // slice() accept -ve index, if used then position counted from end of the string
-
-
 
 var string1 = "give me some part of string!";
 var len = string1.length;
@@ -94,17 +93,21 @@ console.log(string1.substr(-10,10));
 
 // 3- replace string content:
 
-// str.replace("Divyansh", "abhishek")
+// str.replace(word which u want to replace, replace with)
 
 // it dont change the original string , return new string
 // case sensitive, replace only first occurance of word
-// it can take regexp as an argument
+// it can take regex(regualr expression) as an argument
 
 var newstr = "Hy name is divyansh divyansh";
 
-console.log(newstr.replace("divyansh", "abhishek"));
+console.log(newstr.replace("divyansh", "abhishek"));// replace only first occurance
 
-console.log(newstr.replace(/Divyansh/ig, "abhishe"))
+// /g => represent globally
+// /i => if i is used means case insenstive
+
+console.log(newstr.replace(/Divyansh/ig, "kishu"))
+
 console.log(newstr);
 
 
@@ -114,9 +117,23 @@ console.log(newstr);
 // toLowerCase();
 
 console.log(str.toUpperCase())
+var phrase = "hey name is divyansh divyansh";
+
+var convert = "abhis";
+
+// Hint:
+//  ['hey', 'name', 'is']
+// strArr[0]
+function capitalize(str){
+    strArr = str.split('');
+    // console.log('****', strArr.shift(), strArr);
+    str = strArr.shift().toUpperCase()/*strArr[0]*/ + strArr.join('')
+    console.log('***', str);
+}   
+capitalize(convert);
 
 
-// + , concat("string1", "string2") => concat two or more string
+// + , concat("string1", "string2", 5, "") => concat two or more string
 
 
 // trim whitespaces from string:
@@ -133,6 +150,14 @@ console.log(trimString.trim())
 // charCodeAt(position) => return unicode of char at specified index
 
 
-console.log(str.charAt(109)) // retrun empty stirng
-console.log(str[109]) // return undefined
+console.log(str.charAt(500)) // retrun empty stirng
+console.log(str[500]) // return undefined, readonly purpose
 console.log(str.charCodeAt(0));
+
+
+// convert string to array using split('delimeter');
+// split()
+console.log('Divyansh'.split(''))
+
+
+// Prototype:-
