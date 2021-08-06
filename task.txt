@@ -1,0 +1,11 @@
+calculator,
+
+captialize code for every word in
+
+
+a         abc         abcd        abcde       abcdef
+
+[a_]    [ab, c_]    [ab,cd]    [ab,cd, e_]  [ab,cd, ef]
+
+
+Prototype:- 

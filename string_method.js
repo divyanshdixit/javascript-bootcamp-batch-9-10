@@ -1,6 +1,7 @@
 // but js treate primitive values as object when excuting methods and props
 
-// var x = 10;
+var x = '10';
+// var x = new String('10')
 // var y = "";
 
 
@@ -119,18 +120,19 @@ console.log(newstr);
 console.log(str.toUpperCase())
 var phrase = "hey name is divyansh divyansh";
 
-var convert = "abhis";
+var convert = "divyansh";
 
 // Hint:
 //  ['hey', 'name', 'is']
 // strArr[0]
+
 function capitalize(str){
-    strArr = str.split('');
+    strArr = str.split(''); // a => A
     // console.log('****', strArr.shift(), strArr);
     str = strArr.shift().toUpperCase()/*strArr[0]*/ + strArr.join('')
     console.log('***', str);
 }   
-capitalize(convert);
+capitalize(phrase);
 
 
 // + , concat("string1", "string2", 5, "") => concat two or more string
@@ -152,12 +154,24 @@ console.log(trimString.trim())
 
 console.log(str.charAt(500)) // retrun empty stirng
 console.log(str[500]) // return undefined, readonly purpose
-console.log(str.charCodeAt(0));
+console.log(str.charCodeAt(1)); // @ , m
 
+[1, '', {}, []]
 
+// 'D iy a n s h'
+
+'28/12/1996'
 // convert string to array using split('delimeter');
 // split()
-console.log('Divyansh'.split(''))
+console.log('28/12/1996'.split('/'))
+console.log('28/12/1996'.split(''))
+console.log('28/12/1996'.split())
 
+// array
+// join('delimeter'); => convert array to string using join('delimeter')
+// chaining:
+console.log('28/12/1996'.split('').join('*'))
+
+// toString()
 
 // Prototype:-
