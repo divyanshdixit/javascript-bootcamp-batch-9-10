@@ -10,18 +10,24 @@ console.log(y);
 // sum + 
 
 
-var a = "100";
+var a = "10500";
 var b = "200";
 // Number(a) - Number(b)
-console.log(a-b)// 
 
-// non -numeric , airthmatic operation => NaN
+// js try to convert string to numbers while working on airthmatic operation
+console.log(a - b)// 
+console.log(a+b)// 
 
-isNaN() // if Not a numeber return true
+// non - numeric , airthmatic operation => NaN
+
+isNaN() // if Not a numeber(NaN) return true
 
 var num = 32;
 // log 10 2
 console.log(num.toString());
 console.log(num.toString(8));
+
+// lowest number = -Infinity
+// Highest number = Infinity
 
 // 

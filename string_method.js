@@ -117,8 +117,8 @@ console.log(newstr);
 // toUpperCase();
 // toLowerCase();
 
-console.log(str.toUpperCase())
-var phrase = "hey name is divyansh divyansh";
+console.log(str.toUpperCase(), '---------------------')
+var phrase = "hey name is divyansh dixit";
 
 var convert = "divyansh";
 
@@ -126,13 +126,27 @@ var convert = "divyansh";
 //  ['hey', 'name', 'is']
 // strArr[0]
 
+console.log(phrase.split(' '))
+
+function capitalizeFirstLetter(phrase){
+    phraseArr = phrase.split(' ');
+    phraseArrLen = phraseArr.length
+    let addPhrase = '';
+    // template literals:
+    for(let i=0;i<phraseArrLen;i++){ // i=0, i=1 i =4
+        addPhrase = `${addPhrase}${capitalize(phraseArr[i])} `
+        console.log(addPhrase)// 'Hey' + 'Name' => 'HeyName' + 'Dixit'
+    }
+    // phrase = `${capitalize(phraseArr[0])} ${capitalize(phraseArr[1])} ${capitalize(phraseArr[2])} ${capitalize(phraseArr[3])} ${capitalize(phraseArr[4])}`
+    return addPhrase;
+}
 function capitalize(str){
     strArr = str.split(''); // a => A
-    // console.log('****', strArr.shift(), strArr);
-    str = strArr.shift().toUpperCase()/*strArr[0]*/ + strArr.join('')
-    console.log('***', str);
+    str = strArr.shift().toUpperCase() + strArr.join('')
+    return str;
 }   
-capitalize(phrase);
+console.log(capitalizeFirstLetter(phrase));
+console.log(capitalize(convert));
 
 
 // + , concat("string1", "string2", 5, "") => concat two or more string
