@@ -4,8 +4,20 @@ captialize code for every word in
 
 
 a         abc         abcd        abcde       abcdef
-
 [a_]    [ab, c_]    [ab,cd]    [ab,cd, e_]  [ab,cd, ef]
+
+
+----- New Task ------
+
+find maximum value in given array 
+[ 1, 4, 5,9, 10, 3, 2, 20, 1]
+
+
+program for reverse the string and number:
+
+"Divyansh" => "hsnayviD"
+
+12345 => 54321
 
 
 Prototype:- 
