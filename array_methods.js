@@ -55,3 +55,5 @@ console.log(name(1));
 // for(i=0; i<arr.length; i++){
 //     console.log(arr[i]*2, i, arr)
 // }
+
+// push(), pop(), shift(), unshift(), splice()

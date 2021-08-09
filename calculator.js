@@ -25,7 +25,7 @@ const doMath = {
 var num1 = prompt('Write first value here'); // string
 var num2 = prompt('Write second value here'); // string
 
-num1 = parseFloat(num1); // 10.00 10
+num1 = parseFloat(num1); // 10.45, 10.00 => 10
 num2 = parseFloat(num2); // 11
 
 console.log(parseFloat(num1), parseFloat(num2));

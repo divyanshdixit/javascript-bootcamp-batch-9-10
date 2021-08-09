@@ -56,7 +56,7 @@ function capitalizeFirstLetter(phrase){
 function capitalize(str){
     strArr = str.split(''); // a => A
     str = strArr.shift().toUpperCase() + strArr.join('')
-    return str;
+    return str; // Hey
 }   
 console.log(capitalizeFirstLetter(phrase));
 console.log(capitalize(convert));
