@@ -62,5 +62,78 @@ console.log(capitalizeFirstLetter(phrase));
 console.log(capitalize(convert));
 
 
+// ***********************************
+
+// "Divyansh" => "hsnayviD"
+
+var strInput = "Divyansh";
+var strOutput = '';
+
+for(let i=strInput.length-1;i>=0;i--){
+    strOutput += strInput[i]; // complexity 
+}
+console.log(strOutput, strInput);
+
+
+
+
+function reversStr(str){
+    if(str.length == 0){
+        return false;
+    }
+    else{
+        return reversStr(str.substr(1)) + str[0]
+    }
+}
+console.log(reversStr(strInput));
+
+function reverseString(str){
+
+    // simple solution using inbuilt fucntion
+
+    //  Number(num.toString().split('').reverse().join(''));
+
+    let strLen = str.length;
+    /* 
+        str[0] = D => h
+        str[7] = h => D
+
+    */
+
+        for(let i=0; i<strLen ;i++){ // length/2 => complexity will be less
+
+            // swap two chars  divyansh
+            let temp = str[i]; // D, i
+            str[i] = str[strLen - (i+1)] // h, s
+            // str[strLen - (i+1)] = temp // D,i  // 0 = 7, 1 = 6, 2= 5, 3=4, 4 = 3, 5= 2  
+            console.log(str);
+        }
+
+    return str;
+}
+
+console.log(reverseString(strInput));
+
+// 12345/10  => 5
+// 1234/10 => 4
+// 123/10 => 3
+// 12/10 => 2
+// 1
+
+// %
+
+// 12345%10 => 5
+// 12345/10 => 1234%10 => 4
+//             1234/10 => 123
+
+// 5*10 => 50+4 => 54*10 => 540+3 = > 543*10 => 5430+2 => 5432*10 => 54320+1 => 54321
+
+// var t = 2
+// t = 21; => 2*10 + 1
+
+
+// console.log(reverseString(strInput));
+
+
 
 // **********************************************************************

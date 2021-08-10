@@ -1,6 +1,6 @@
 // js array are used to store multiple values of multiple data types  in single variable
 
-var arr = ["div1",'div2', 'div3', 24, 25, {}];
+var arr = [ "div1",'div2', 'div3', 24, 25, {}, true ];
 console.log( arr);
 
 // to get the data type of object(array) use 'instanceof' operator
