@@ -3,6 +3,8 @@
 // [a_]    [ab, c_]    [ab,cd]    [ab,cd, e_]  [ab,cd, ef]      []
 
 var input = 'abc';
+
+console.log(object)
 var output = []; 
 var count = 0;
 var chars = ''; 

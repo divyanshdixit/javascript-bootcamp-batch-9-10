@@ -4,8 +4,18 @@ var arr = [1,2,3,4,5];
 
 console.log(arr.length)
 
+function xy(a,b){
 
-// forEach(function, thisvalue) => looping through array elements
+}
+
+function name(xy){ // one function pass as parameter to another function => xy becomes a callback function 
+    xy(4,3);
+}
+[1,2,3,4,5];
+
+// forEach(function, thisvalue) => looping through array elements, it'll not retrun any value 
+
+// inside callback function 3 params passed :
 
 // value => current value of given array (required)
 // index => index of current value of given array (optional)
@@ -20,24 +30,39 @@ console.log(arr.length)
 // })
 
 console.log(arr);
-arr.forEach(function(val, index, array){
+
+arr.forEach(function(val,index,array){
     console.log(val*2, index, array)
 })
 
+arr.forEach((val,index, array) => {
+    console.log(val*2, index, array)
+})
 
 // console.log(name());
 // arrow function:
 
 // shorter syntax of regular function 
 
+name(); // => name is not a function 
+
 function name(x){
     console.log('object')
 }
 
 
+
+var name = function(){
+
+}
+
+var name = () => {
+    console.log('object')
+}
+
 // arrow function must define before calling:
 
-var name = (x,y) => {
+var name = (x) => {
     console.log('object')
     return '';
 }
@@ -46,9 +71,6 @@ var name = (x,y) => {
 
 
 console.log(name(1));
-
-
-
 
 
 
