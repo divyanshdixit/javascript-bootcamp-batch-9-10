@@ -4,7 +4,6 @@
 
 var input = 'abc';
 
-console.log(object)
 var output = []; 
 var count = 0;
 var chars = ''; 
@@ -69,6 +68,16 @@ console.log(capitalize(convert));
 // "Divyansh" => "hsnayviD"
 
 var strInput = "Divyansh";
+
+console.log('****', strInput.charAt(0));
+
+// strInput[0] = "A";
+strInput.charAt(0);
+
+
+console.log('****', strInput.charAt(0));
+
+
 var strOutput = '';
 
 for(let i=strInput.length-1;i>=0;i--){
@@ -78,43 +87,44 @@ console.log(strOutput, strInput);
 
 
 
+// recuerssion => function call itself
 
 function reversStr(str){
     if(str.length == 0){
         return false;
     }
     else{
-        return reversStr(str.substr(1)) + str[0]
+        return reversStr(str.substr(1)) + str[0];
     }
 }
 console.log(reversStr(strInput));
 
-function reverseString(str){
+// function reverseString(str){
 
-    // simple solution using inbuilt fucntion
+//     // simple solution using inbuilt fucntion
 
-    //  Number(num.toString().split('').reverse().join(''));
+//     //  Number(num.toString().split('').reverse().join(''));
 
-    let strLen = str.length;
-    /* 
-        str[0] = D => h
-        str[7] = h => D
+//     let strLen = str.length;
+//     /* 
+//         str[0] = D => h
+//         str[7] = h => D
 
-    */
+//     */
 
-        for(let i=0; i<strLen ;i++){ // length/2 => complexity will be less
+//         for(let i=0; i<strLen/2 ;i++){ // length/2 => complexity will be less
 
-            // swap two chars  divyansh
-            let temp = str[i]; // D, i
-            str[i] = str[strLen - (i+1)] // h, s
-            // str[strLen - (i+1)] = temp // D,i  // 0 = 7, 1 = 6, 2= 5, 3=4, 4 = 3, 5= 2  
-            console.log(str);
-        }
+//             // swap two chars  divyansh
+//             let temp = str[i]; // D, i
+//             str[i] = str[strLen - (i+1)] // h, s
+//             // str[strLen - (i+1)] = temp // D,i  // 0 = 7, 1 = 6, 2= 5, 3=4, 4 = 3, 5= 2  
+//             console.log(str);
+//         }
 
-    return str;
-}
+//     return str;
+// }
 
-console.log(reverseString(strInput));
+// console.log(reverseString(strInput));
 
 // 12345/10  => 5
 // 1234/10 => 4
@@ -135,6 +145,22 @@ console.log(reverseString(strInput));
 
 
 // console.log(reverseString(strInput));
+
+var Randomarr = [ 1, 4, 5,9, 10, 3, 2, 20, 1];
+var maxValue = 0; // 4, 5, 10, 20
+
+
+function findMaxValue(num){
+    for(let i=0; i<num.length ;i++){
+        if(num[i] > maxValue){
+            maxValue = num[i];
+        }else{
+            console.log(`get minimum value ${num[i]}`)
+        }
+    }
+    return maxValue;    
+}
+console.log(findMaxValue(Randomarr));
 
 
 

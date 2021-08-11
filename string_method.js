@@ -166,15 +166,17 @@ console.log(trimString.trim())
 // charCodeAt(position) => return unicode of char at specified index
 
 
-console.log(str.charAt(500)) // retrun empty stirng
-console.log(str[500]) // return undefined, readonly purpose
+console.log(str.charAt(0)) // retrun first char
+console.log(str[100]) // return first char, readonly purpose
+
+
 console.log(str.charCodeAt(1)); // @ , m
 
 [1, '', {}, []]
 
 // 'D iy a n s h'
 
-'28/12/1996'
+'28/12/1996' str[11] => undefined, str.charAt(11) = ''
 // convert string to array using split('delimeter');
 // split()
 console.log('28/12/1996'.split('/'))

@@ -20,4 +20,9 @@ program for reverse the string and number:
 12345 => 54321
 
 
+[ 1, 4, 5,9, 10, 5, 4, 20, 1, 9]
+Duplicate item's value and it's index
+Duplicate number => [1,4,5,9], Combination of index and number => [ [0, 1], [8, 1] ] , Index = [0,1,2,3]
+
+
 Prototype:- 
