@@ -91,7 +91,7 @@ console.log(newArr);
 console.log(newArr.toString())
 
 // join('delimeter') : convert array to string, using passed delimeter, if not passed (,) comma is by default
-console.log(newArr.join(''))
+console.log(newArr.join())
 
 
 // popping(out) and pushing(in) element from/to array :
@@ -106,7 +106,7 @@ console.log(newArr.push(50), newArr)
 
 // shifting elements of array :
 
-// shift() => remove the first element fro array and shift all oterh elemnt to a lower index, return the value that was shifted out
+// shift() => remove the first element from array and shift all oterh elemnt to a lower index, return the value that was shifted out
 console.log(newArr.shift(), newArr);
 
 // unshift() => add new element at the start of array & unshift other to higher index, return new length of the array 
@@ -124,7 +124,11 @@ var obj = {
     age:24
 }
 
-console.log(obj);
+// Server to web page => JSON
+
+// JSON.parse() => object
+
+// console.log(obj);
 
 delete obj.age;
 
@@ -141,12 +145,12 @@ console.log(obj);
 
 // splicing an array:
 
-// can be used to add, remove item of any index position from an array :
+// can be used to add, remove item on any index position from an array :
 // return an array of the removed element , if none return [] array 
 
 // syntax:
 
-// arrayName.splice(index(where new element should added), how_many_element_should_remove, "string, wht elment u want to add");
+// arrayName.splice(index(where new element should be added), how_many_element_should_remove, "string, wht elment u want to add");
 
 console.log(newArr.splice(0, 0, 10), newArr); // working as unshift()
 

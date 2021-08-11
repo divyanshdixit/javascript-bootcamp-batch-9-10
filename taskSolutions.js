@@ -154,8 +154,6 @@ function findMaxValue(num){
     for(let i=0; i<num.length ;i++){
         if(num[i] > maxValue){
             maxValue = num[i];
-        }else{
-            console.log(`get minimum value ${num[i]}`)
         }
     }
     return maxValue;    
