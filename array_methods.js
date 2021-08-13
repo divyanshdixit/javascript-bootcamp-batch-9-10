@@ -162,5 +162,98 @@ console.log(newArr.splice(newArr.length, 0, 60,70,43), newArr) // working as pus
 
 console.log(newArr.splice(3,0, 40,50),newArr)  // => adding 2 new element at index 3
 console.log(newArr.splice(3,2),newArr) // => removin 2 element form index 3
-// push(), pop(), shift(), unshift(), splice()
+
+
+// merging arrays:
+
+// concat() => create new array by merging(adding) two or more arrays:
+
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+
+// concat('sda', 'asdsd')
+console.log(arr1.concat(arr2), arr1);
+
+const mergeArr = arr1.concat(arr2,4, newArr);
+console.log(mergeArr);
+
+
+// slicing an array:
+
+// slice out a piece of an array into new array
+// start from given position
+// ending index is not included
+
+console.log(mergeArr.slice(6, 10), mergeArr);
+
+console.log(mergeArr.slice(-5, -1), mergeArr) // start from last index of array
+console.log(mergeArr.slice(8, 12), mergeArr)
+
+
+// entries()
+
+// return array iterator object wih key/value pair.
+
+console.log(mergeArr.entries());
+
+for (const i of mergeArr.entries()) {
+    console.log(i);
+}
+
+var merge = {
+    name:'Divyansh',
+    city:'kanpur'
+}
+console.log(Object.entries(merge))
+
+
+// keys()
+
+// return an array iterator object only containing keys of an array:
+console.log(mergeArr.keys());
+
+for (const i of mergeArr.keys()) {
+    console.log(i)
+}
+
+
+// values()
+
+// return an array iterator object only containing values of an array:
+
+console.log(mergeArr.values());
+
+for (const i of mergeArr.values()) {
+    console.log(i)
+}
+
+// filter() 
+
+// return an array filtered with all array elements that passes condition(test)
+// not chnaged the original array.
+
+// syntax:
+
+console.log(mergeArr.filter( (val, index, array) => {
+    return !(val > 18); // true, false
+}), mergeArr);
+
+
+// arr.forEach( (val,index, array) => {
+
+// })
+
+
+// find() => 
+
+// return the value of first element in array that passes a test(condition)
+
+console.log(mergeArr.find( (val, index, array) => {
+    return val > 20;
+}))
+
+
+console.log(mergeArr.findIndex( (val, index, array) => {
+    return val > 20;
+}))
 
