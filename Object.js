@@ -1,5 +1,5 @@
 // object literal
-// new Object()
+// new Object() (never use)
 //  object function constructor
 // Object.create()
 

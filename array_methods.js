@@ -178,11 +178,12 @@ const mergeArr = arr1.concat(arr2,4, newArr);
 console.log(mergeArr);
 
 
-// slicing an array:
+// slicing an array:-
 
-// slice out a piece of an array into new array
+// slice out a piece of an array into new array (retrun new array)
 // start from given position
 // ending index is not included
+// -ve indecies are also 
 
 console.log(mergeArr.slice(6, 10), mergeArr);
 
@@ -190,7 +191,7 @@ console.log(mergeArr.slice(-5, -1), mergeArr) // start from last index of array
 console.log(mergeArr.slice(8, 12), mergeArr)
 
 
-// entries()
+// entries(), keys(), values()
 
 // return array iterator object wih key/value pair.
 
@@ -227,9 +228,9 @@ for (const i of mergeArr.values()) {
     console.log(i)
 }
 
-// filter() 
+// filter():-
 
-// return an array filtered with all array elements that passes condition(test)
+// return new array with filtered value of array that passes given condition(test)
 // not chnaged the original array.
 
 // syntax:
