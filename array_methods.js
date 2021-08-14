@@ -258,3 +258,158 @@ console.log(mergeArr.findIndex( (val, index, array) => {
     return val > 20;
 }))
 
+
+
+// sorting()
+// arrayName.sort(compare function(a,b))
+// sort oder based on unicode of element in asc order
+// used for sorting string(oringally)
+// compare fuction accept two argument & return a value taht determinss the sort order
+// if return value is greater than 0 sort b to lower index than A (b comes first )
+// if return valus is less than 0 sort a to lower index than B (a comes first)
+// if return valus is 0 thn their postion remains same.
+
+var unsortArr = [9,8,6,5,0];
+
+console.log(unsortArr.sort())
+
+var unsortArr1 = [1,2,19,33,33,100]; // 1,2,19,33,100
+
+console.log(unsortArr1.sort())
+
+var strArr = ['ear', 'cat', 'div', 'boy', 'abhi']; // e, d, c , b, a
+console.log(strArr.sort())
+
+// compare function: 
+var numbers = [30,20,10,0,1,3,2,5] // 0,1,2,3,5,10,20,30
+console.log(numbers.sort())
+console.log(numbers.sort( function(a,b){
+    return a-b; // ascending order
+}))
+
+console.log(numbers.sort( function(a,b){
+    return b-a; // descending order
+}))
+
+console.log(strArr.sort( function(a,b){
+    return a-b; // ascending order
+}))
+
+console.log(strArr.sort( function(a,b){ // for decending array
+    if(a>b){
+        return -1;
+    }
+
+    if(b>a){
+        return 1;
+    }
+
+    
+    return 0;
+}))
+
+// mixed char array:
+
+// console.log(arr.sort(function(a,b) { // asecending order
+//     let x = a.toUpperCase();
+//     let y = b.toUpperCase();
+
+//     if(x>y){
+//         return 1;
+//     }
+//     if(x<y){
+//         return -1;
+//     }
+//     return 0;
+// }))
+
+// JSON.parse()
+// {
+//     "details":[
+//         {
+//             "name":"div",
+//             "id":11
+//         },
+//         {
+//             "name":"div",
+//             "id":11
+//         }
+//     ]
+// }
+
+var emp = [
+    {name:"div", id:12},
+    {name:"abhi", id:11}
+]
+
+var jsonObj = [
+    {
+    details:[
+        {
+            name:"div",
+            id:12
+        },
+        {
+            name:"abhi",
+            id:12
+        }
+    ]
+}
+]
+console.log(jsonObj[0].details.sort(function(a,b){
+    if(a.id > b.id){
+        return [
+            {
+                details : a.id - b.id
+            }
+        ]
+    }
+    if(b.id > a.id){
+        return [
+            {
+                details : b.id - a.id
+            }
+        ]
+    }
+    return jsonObj;
+}))
+console.log(emp.sort(function(a,b){
+     return a.id-b.id;
+}))
+
+// console.log(jsonObj.details[1].id)
+
+
+// copyWithin()
+
+// copies array eelemetn to another position in array and overwrite the existing values
+// changes original array
+// ending index is not included
+
+// arr.copyWithin(target, start, end)
+
+var ff = [1,2,3,4,5,6]
+console.log(ff.copyWithin(3, 0, 3))
+
+for(let i =0; i<ff.length ; i ++){
+    console.log( ff[i]*4)
+}
+
+// includes()
+
+// map()
+
+// return an array with the rsult  of calling a function on each aaray elements 
+
+console.log(ff.map( function(val){ // val,index, array
+    return val*4; // 4 []
+}))
+
+// reduce()
+
+// reverse()
+
+// given array will be reversed
+// change original array
+
+console.log(ff.reverse())

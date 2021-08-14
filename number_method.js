@@ -43,11 +43,13 @@ console.log(Number('divyansh')); // nan
 
 // Date() 
 
-// Number(Date()) => it 'll convert data to number(milisecond) 
+// Number(Date()) => it 'll convert date to number(milisecond) 
 // 1 ST JANURARY 1970
 
 // console.log(new Date(year, month, date, h, m, s, milisecond))
 console.log(new Date(2021,08,08))
+
+// 08-09-2021 
 
 
 // parseInt() => prase a string and return a whole number
