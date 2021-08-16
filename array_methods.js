@@ -264,9 +264,10 @@ console.log(mergeArr.findIndex( (val, index, array) => {
 // arrayName.sort(compare function(a,b))
 // sort oder based on unicode of element in asc order
 // used for sorting string(oringally)
+
 // compare fuction accept two argument & return a value taht determinss the sort order
-// if return value is greater than 0 sort b to lower index than A (b comes first )
-// if return valus is less than 0 sort a to lower index than B (a comes first)
+// if return value is greater than 0 (+ve) sort b to lower index than A (b comes first ) 
+// if return valus is less than 0 (-ve) sort a to lower index than B (a comes first) if(a < b) retrun 0 
 // if return valus is 0 thn their postion remains same.
 
 var unsortArr = [9,8,6,5,0];
@@ -281,7 +282,7 @@ var strArr = ['ear', 'cat', 'div', 'boy', 'abhi']; // e, d, c , b, a
 console.log(strArr.sort())
 
 // compare function: 
-var numbers = [30,20,10,0,1,3,2,5] // 0,1,2,3,5,10,20,30
+var numbers = [30, 20,10,0,1,3,2,5] // 0,1,2,3,5,10,20,30
 console.log(numbers.sort())
 console.log(numbers.sort( function(a,b){
     return a-b; // ascending order
@@ -388,16 +389,22 @@ console.log(emp.sort(function(a,b){
 
 // arr.copyWithin(target, start, end)
 
-var ff = [1,2,3,4,5,6]
+var ff = [1,2,3,4,5]
 console.log(ff.copyWithin(3, 0, 3))
 
 for(let i =0; i<ff.length ; i ++){
     console.log( ff[i]*4)
 }
 
-// includes()
+// includes():
+// check whether an array contains specific elementor not  , if yes retun true , else false, 
+// case sensitive
 
-// map()
+// syntax: arr.includes(element, start(optional))
+
+console.log(arr.includes('divyansh', 0));
+
+// map(), filter(), forEach()
 
 // return an array with the rsult  of calling a function on each aaray elements 
 
@@ -413,3 +420,25 @@ console.log(ff.map( function(val){ // val,index, array
 // change original array
 
 console.log(ff.reverse())
+
+// Reduce():
+
+// reduces the array to single value 
+// excute a provied function for each value of thr array 
+// return value of the function is stored in accumulator (variable)
+// doesn;t chnage origianl array
+
+// retrun tehe accumulated vaue of the callback function
+
+// array.reduce((total, val, index, arr) => {}, init);
+
+var reduceArr = [10,30, 50];
+
+var reducerFun = (total, val) => {
+    console.log(total, val);
+    return total + val;
+}
+console.log(reduceArr.reduce(reducerFun));
+
+// every(): 
+// return true if all the array element passed given condition else false;
