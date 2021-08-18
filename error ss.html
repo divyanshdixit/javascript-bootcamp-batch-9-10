@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputelem" />
+    <span id="message" style="color:red"> </span>
+
+    <button type="button" onclick="myfunc()"> Test </button>
+
+    <script>
+        // hoisting
+        var myfunc = () => {
+            var x = document.getElementById('inputelem');
+            try{
+                
+                let val = x.value;
+                if(val == ''){
+                    throw 'Please give some value';
+                }
+                if(isNaN(val)){
+                    throw "Not a number"
+                }
+                val = Number(val);
+                if(val < 5)
+                    throw "give more than 5";
+                else if(val > 10)
+                    throw "give less than 10";
+                    else 
+                    throw '';
+            }catch(err){
+                var errObj = {
+                    code:'(AZ-1013)',
+                    message:err
+                }
+                document.getElementById("message").innerHTML = `${err}`
+                console.log(errObj);
+            }finally{
+                console.log(x.value)
+                x.value = '';
+                // val = ''
+            }
+        }
+    </script>
+
+</body>
+</html>
