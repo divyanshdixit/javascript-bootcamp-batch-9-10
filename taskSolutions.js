@@ -163,3 +163,124 @@ console.log(findMaxValue(Randomarr));
 
 
 // **********************************************************************
+
+var farr = [ 1, 4, 5,9, 10, 5, 4, 20, 1, 9];
+
+function reverseGivenArray(arr){
+    for(let i=0;i<arr.length/2;i++){
+        let tmp = arr[i];
+        arr[i] = arr[arr.length-(i+1)]
+        arr[arr.length-(i+1)] = tmp;
+    }
+    return arr;
+}
+
+console.log(reverseGivenArray(farr));
+
+// get duplicate item's value:
+
+function getDuplicateElementValue(arr){
+    var duplicateElem = [];
+    var combineArr = [];
+    var firstDuplicateIndex= [];
+
+    for(let i=0;i<arr.length;i++){ // 9
+        for(let j=i+1;j<arr.length;j++){ // j = 6
+            if(arr[i] == arr[j]){
+                combineArr.push([i, arr[i]])
+                combineArr.push([j, arr[j]])
+                duplicateElem.push(arr[j]);
+                firstDuplicateIndex.push(i);
+            }
+        }
+    }
+    // var name = "divyansh";
+
+    // var obj ={
+    //     name:name,
+    //     name
+    // }
+    let allResult = {
+        combineArr,
+        duplicateElem,
+        firstDuplicateIndex
+    }
+    return allResult;
+}
+console.log(getDuplicateElementValue(farr), typeof getDuplicateElementValue(farr));
+
+// destructuring:
+
+
+// =====================================================
+
+// "camelCasing"  =>  "camel Casing" // -6
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// console.log('camelCasingTest'.slice(0,5)) 
+var camelStr = 'CamelCasingTest';
+var camelArr = [];
+var resultStr = '';
+// The legacy RegExp $1, $2, $3, $4, $5, $6, $7, $8, $9 properties are static and read-only properties of regular expressions that contain parenthesized substring matches.
+// The non-standard lastMatch property is a static and read-only property of regular expressions that contains the last matched characters. RegExp.$& is an alias for this property
+// string.replace(/[A-Z]/g, ' $&'));
+function solution(string) {
+    return(string.replace(/([A-Z])/g, ' $1'));
+  
+  }
+  console.log(solution(camelStr))
+function splitCamelCase(camelStr){
+for(let i=0; i<camelStr.length ; i++){
+    if(camelStr.charCodeAt(i) >= 65 && camelStr.charCodeAt(i) <= 90){
+        console.log(i)
+        camelArr.push(i);
+    }
+}
+
+camelArr.unshift(0);
+for(let j=0;j<camelArr.length;j++){
+    resultStr += `${camelStr.slice(camelArr[j], camelArr[j+1])} `;
+}
+return resultStr;
+}
+
+console.log(splitCamelCase(camelStr))
+
+// 3red solution:
+function solution(string) {
+    string = string.split('').map(function (el) {
+      if (el === el.toUpperCase()) {
+        el = ' ' + el
+      }
+      return el
+    })
+    return string.join('')
+  }
+
+//   4th :
+  function solution(string) {
+    return string.split('').map(s => {
+      if(s.charCodeAt(0) >= 65 && s.charCodeAt(0) <= 90)
+        return ' ' + s;
+      else
+        return s;
+    }).join('');
+}
+// function splitCamelCase(str){
+//     for(let i=0; i<str.length ; i++){
+//         if(str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122){ 97, 122
+//             console.log('small ')
+//         }else{
+//             var CamelCasePart = str.slice(i);
+//             console.log(CamelCasePart, i);
+//             // splitCamelCase(CamelCasePart);
+//             // break;
+//             var lowerCasePart = str.slice(-(i+1), 0)
+//             console.log(lowerCasePart);
+//         }
+//     }
+//     return `${CamelCasePart} ${lowerCasePart}`;
+// }
+
+// console.log(splitCamelCase('camelCasingTest'));

@@ -117,3 +117,51 @@ console.log(newObj);
 
 
 // Comparing two object (complex ) and number (primitive)
+
+// destructing: 
+
+// ES6 
+// const newObj = {
+//     fname:'divyansh',
+//     lname:'dixit',
+//     city:"kanpur"
+//     // getFullName:function(){
+//     //     return `${this.fname} ${this.lname}`
+//     // }
+// }
+
+// const arr = ['div', 'dixit', 'kanour']
+// const [f, l, c] = arr;
+
+// var n = newObj.fname; 
+// var l = newObj.fname; 
+// var c = newObj.fname; 
+
+// // unpacking of props or methods:
+
+// const {fname, lname, city} = newObj; 
+
+// console.log(fname)
+var name = () => {
+    // 
+}
+var obj = {
+    getName:function(){
+        return this.name + this.lname;
+    }
+}
+
+var obj1 = {
+    name:'Divyansh'
+}
+
+var obj1 = {
+    lname:'Divyansh'
+}
+
+// console.log(obj.getBNa)
+
+// used to call an object method with another obeject as an argument 
+
+console.log(obj.getName.call(obj1));
+
