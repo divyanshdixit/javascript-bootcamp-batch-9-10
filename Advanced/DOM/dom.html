@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id='p1' class="para"> Para 1 </p>
+        <p class="para"> Para 2 </p>
+        <p id='p3'> Para 3 </p>
+        <h1 id='h1'> Heading 1 </h1>
+    </div>
+
+    <div id="div2" class="div2cls">
+        <p class="div2cls"> Div 2 para </p>
+        <h1 class="div2cls"> heading 2 div 2</h1>
+        <p class="div2cls intro"> Intro para 2 </p>
+    </div>
+
+    <p class="intro" > Intro para 1 </p>
+    
+
+    <script>
+        // get element by id :
+
+        const p4 = document.getElementById('p4'); // return element as an object else null
+        console.log(p4); 
+
+        // get the element by ClassName:
+
+        // retrun html collection which is an obeject
+        
+        const p2 = document.getElementsByClassName('para');
+        console.log(typeof p2);
+
+        // p2.forEach(element => {
+        //   console.log(element)  
+        // });
+
+        // html collection is only looks like array not work as an array :
+
+
+        // get the element by tagName:-
+
+        const AllP = document.getElementsByTagName("p");
+        console.log(AllP);
+
+
+        // get element inside other div :
+
+        var div2 = document.getElementById('div2');
+        var p = div2.lgetEementsByTagName('p');
+        console.log(p)
+        var h1 = div2.getElementsByTagName('h1');
+        console.log(h1);
+
+        // by css selector:
+        
+        // return nodeList[] as an object but can be work as an array.
+
+        // querySelectorAll()
+        // querySelector()
+
+        // const intro = document.querySelectorAll("p.div2cls.intro");
+        const intro = document.querySelectorAll(".intro");
+        console.log(typeof intro)
+        console.log(intro);
+        intro.forEach(e => console.log(e));
+
+        // onclick
+        clickFunction  = () =>{
+            console.log('clicked');
+        }
+        intro.forEach(e => {
+            // e.onclick = clickFunction()
+
+            e.addEventListener('click', clickFunction)
+        });
+
+    </script>
+
+</body>
+</html>
