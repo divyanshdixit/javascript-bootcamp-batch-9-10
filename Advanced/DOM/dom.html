@@ -22,8 +22,39 @@
 
     <p class="intro" > Intro para 1 </p>
     
+    <img src="" title="title " alt="image here " width="" height=""/> 
+    
+    <form id="form1" name="form1">
+        <input type="text"/>
+        <input type="submit"/>
+    </form>
+
+    <form id="form2" onsubmit="submitForm()">
+        <input type="text" value="divyansh"/>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <div id="getbody">
+
+    </div>
 
     <script>
+
+        
+
+        console.log(document.forms)
+        console.log(document.forms['form1'])
+
+        var forms = document.forms['form2'];
+        // to get the element of forms
+        console.log(forms.elements[0].value)
+        
+        function submitForm(){
+           alert( forms.elements[0].value)
+        }
+
+        console.log(document.body)
+        document.getElementById('getbody').innerHTML = document.body.innerHTML
         // get element by id :
 
         const p4 = document.getElementById('p4'); // return element as an object else null
@@ -52,7 +83,7 @@
         // get element inside other div :
 
         var div2 = document.getElementById('div2');
-        var p = div2.lgetEementsByTagName('p');
+        var p = div2.getElementsByTagName('p');
         console.log(p)
         var h1 = div2.getElementsByTagName('h1');
         console.log(h1);
@@ -71,13 +102,15 @@
         intro.forEach(e => console.log(e));
 
         // onclick
-        clickFunction  = () =>{
+        // clickFunction  = () =>{
+        //     console.log('clicked');
+        // }
+        function clickFunction(){
             console.log('clicked');
         }
         intro.forEach(e => {
-            // e.onclick = clickFunction()
-
-            e.addEventListener('click', clickFunction)
+            e.onclick = clickFunction
+            // e.addEventListener('click', clickFunction)
         });
 
     </script>

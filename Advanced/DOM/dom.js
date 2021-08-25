@@ -70,6 +70,14 @@ if elements is found, method will return all founded elements in an HTML COLLECT
 
 6- by html object collection
 
+document.forms => id => document.forms['idname']
+document.body => prop => innerHTML, innerText
+document.head
+document.title
+document.anchors (get the number of anchors element who have name attribute)<a href="http://www.google.com" name=""> </a>
+document.links (work without name attribute in anchor element)
+document.images
+document.scripts => innerHTML, length
 
 2- Changing html content:
 
