@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+    for in=> 
+    used for objects
+    key,with the help of key we can find the value,
+
+    for of => iterator object
+    used for array, string, number any iterable object
+    retrun direct value , no key 
+    -->
+
+    <div id="show">
+    
+    </div>
+
+    <div id="show2">
+
+    </div>
+
+    <div id="show3">
+
+    </div>
+
+    <a name="anch1"> Link1 </a>
+    <a name="anch1"> Link2 </a>
+
+    <a href=""> Link3 </a>
+    <a href=""> Link4 </a>
+
+
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg&imgrefurl=https://pixabay.com/images/search/sun/&tbnid=L8xfQakH9a8tJM&vet=12ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ..i&docid=T5n6IXZ5nFRelM&w=771&h=480&q=images&ved=2ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ"/>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg&imgrefurl=https://pixabay.com/images/search/sun/&tbnid=L8xfQakH9a8tJM&vet=12ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ..i&docid=T5n6IXZ5nFRelM&w=771&h=480&q=images&ved=2ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ"/>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg&imgrefurl=https://pixabay.com/images/search/sun/&tbnid=L8xfQakH9a8tJM&vet=12ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ..i&docid=T5n6IXZ5nFRelM&w=771&h=480&q=images&ved=2ahUKEwiP8_el1NHyAhVj1nMBHWvVD4EQMygDegUIARDPAQ"/>
+
+    <script>
+
+        console.log(document.anchors); // both have length prop, item() and namedItem() method
+
+        console.log(document.links);
+
+        console.log(document.images);
+        
+        for(let i=0; i<document.links.length; i++ ){
+            console.log(document.links[i])
+        }
+
+        var obj = {
+            fileName:'practice1.html',
+            owner:"Divyansh",
+            readOrWrite:"read"
+        }
+
+
+        var div = document.getElementById('show');
+        console.log(div.innerHTML);
+
+        for(let i in obj) {
+           console.log(i)
+        //    i as property
+           div.innerHTML = div.innerHTML +  `<p> ${i} : ${obj[i]}</p>`
+        }
+
+        // Object to array : 
+        console.log(Object.keys(obj), Object.values(obj), Object.entries(obj));
+
+        for (let i of Object.keys(obj)) {
+            console.log(i);
+        }
+
+        // array to object:
+
+        var arr = ["Divyansh", "1011", "Software Developer"];
+        // array iterator object
+        console.log(arr.keys());
+
+        var div2 = document.getElementById('show2');
+
+        for (let i  of arr.keys()) {
+            console.log(i);
+            div2.innerHTML += `${i+1}`
+        }
+
+        for (let j of arr.values()) {
+            console.log(j)
+            div2.innerHTML += `${j}`
+        }
+
+        var div3 = document.getElementById('show3');
+
+        for (let k of arr.entries()) {
+            console.log(k);
+            div3.innerHTML += `<p> ${k[0]+1} : ${k[1]} </p>`
+        }
+
+        console.log(div3.innerHTML, div3.innerText)
+
+    </script>
+</body>
+</html>
